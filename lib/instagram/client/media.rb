@@ -16,7 +16,7 @@ module Instagram
       # @rate_limited true
       # @see http://instagram.com/developer/endpoints/media/#get_media
       def media_item(*args)
-        id = args.first || "self"
+        id = args.first
         response = get("media/#{id}")
         response
       end

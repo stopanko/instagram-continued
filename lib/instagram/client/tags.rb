@@ -33,6 +33,7 @@ module Instagram
       # @authenticated false
       # @rate_limited true
       def tag_recent_media(id, *args)
+        # TODO next_max_id and min_id are deprecated for this endpoint; use min_tag_id and max_tag_id instead
         options = args.last.is_a?(Hash) ? args.pop : {}
         response = get("tags/#{id}/media/recent", options, false, false, false)
         response
